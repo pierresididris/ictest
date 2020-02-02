@@ -10,11 +10,6 @@ pipeline {
 				sh 'npm --version'             
 			}       
 
-
-
-
-
-
 		}     
 	} 
 }
