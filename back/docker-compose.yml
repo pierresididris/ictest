@@ -1,0 +1,13 @@
+version: "3"
+services:
+    backend:
+        container_name: awesome_server
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        image: hiro/awesome_server
+        ports:
+            - "8085:8085"
+        restart: always
+        links:
+            - mongo
