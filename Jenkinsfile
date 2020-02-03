@@ -14,7 +14,7 @@ pipeline {
 				}
 				sh "pwd"
 			}         
-		}
+		} 
 		stage("build front") {
 			steps {
 				dir('/var/jenkins_home/workspace/pierre/front/'){
