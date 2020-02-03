@@ -5,9 +5,13 @@ pipeline {
 		} 
 	}     
 	stages {         
-		stage("Build and start test image") {
+		stage("Builds project") {
 			steps {
 				sh "docker-compose build"
+			}         
+		}
+		stage("Start project") {
+			steps {
 				sh "docker-compose up -d"
 			}         
 		}
