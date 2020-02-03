@@ -24,7 +24,7 @@ pipeline {
 		}
 		stage("build backend") {
 			steps {
-				dir('/var/jenkins_home/workspace/pierre/front/'){
+				dir('/var/jenkins_home/workspace/pierre/back/'){
 					sh "docker-compose up -d"
 				}
 			}         
