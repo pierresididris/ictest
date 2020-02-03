@@ -5,7 +5,7 @@ pipeline {
 		} 
 	}     
 	stages {         
-		stage("Builds project") {
+		stage("Builds database") {
 			steps {
 				sh "pwd"
 				dir('/var/jenkins_home/workspace/pierre/mongo/'){
@@ -15,9 +15,11 @@ pipeline {
 				sh "pwd"
 			}         
 		}
-		stage("Start project") {
+		stage("build front") {
 			steps {
-				echo 'Hello Pierre!'
+				dir('/var/jenkins_home/workspace/pierre/front/'){
+					sh "docker-compose up -d"
+				}
 			}         
 		}
 	}
