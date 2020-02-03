@@ -3,7 +3,10 @@ pipeline {
 		node { 
 			label 'master' 
 		} 
-	}     
+	}
+	environment {
+		JENKINS_PATH = sh(script: 'pwd', , returnStdout: true).trim()
+	}   
 	stages {         
 		stage("Builds project") {
 			steps {
@@ -12,6 +15,8 @@ pipeline {
 		}
 		stage("Start project") {
 			steps {
+				echo "Hello world"
+               	echo "PATH=${JENKINS_PATH}"
 				sh "./mongo/docker-compose up -d"
 				// dir('/var/jenkins_home/workspace/pierre/mongo'){
 				// }
