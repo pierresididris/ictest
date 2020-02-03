@@ -9,7 +9,6 @@ pipeline {
 			steps {
 				sh "docker-composer build"
 				sh "docker-compose up -d"
-				waitUntilServicesReady
 			}         
 		}
 	}
