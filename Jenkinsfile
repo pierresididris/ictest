@@ -12,8 +12,8 @@ pipeline {
 		}
 		stage("Start project") {
 			steps {
-				sh "pwd"
-				dir('mongo'){
+				sh "${workspace}"
+				dir('./mongo'){
 					sh "pwd"
 					sh "docker-compose up -d"
 				}
