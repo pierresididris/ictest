@@ -17,7 +17,7 @@ pipeline {
 			steps {
 				echo "Hello world"
                	echo "PATH=${JENKINS_PATH}"
-				sh "./mongo/docker-compose up -d"
+				// sh "./mongo/docker-compose up -d"
 				// dir('/var/jenkins_home/workspace/pierre/mongo'){
 				// }
 			}         
