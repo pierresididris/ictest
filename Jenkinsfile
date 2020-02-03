@@ -5,8 +5,12 @@ pipeline {
 		} 
 	}     
 	stages {         
-		stage('build') {
-			step([$class: 'DockerComposeBuilder', dockerComposeFile: 'docker-compose.yml', option: [$class: 'ExecuteCommandInsideContainer', command: 'docker-compose build ; docker compose up -d', index: 1, privilegedMode: false, service: 'build appli', workDir: ''], useCustomDockerComposeFile: true])
+		stage("Build and start test image") {
+			steps {
+				sh "docker-composer build"
+				sh "docker-compose up -d"
+				waitUntilServicesReady
+			}         
 		}
 	}
 }
