@@ -12,13 +12,9 @@ pipeline {
 		}
 		stage("Start project") {
 			steps {
-				sh "pwd()"
-				pwd()
-				dir('./mongo'){
-					sh "pwd"
+				dir('/var/jenkins_home/workspace/pierre/mongo/'){
 					sh "docker-compose up -d"
 				}
-				sh "pwd"
 			}         
 		}
 	}
