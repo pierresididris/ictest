@@ -6,3 +6,4 @@ services:
             - /database/data
         ports:
             - "27017:27017"
+            
