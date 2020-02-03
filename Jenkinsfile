@@ -10,13 +10,14 @@ pipeline {
 	stages {         
 		stage("Builds project") {
 			steps {
-				sh "docker-compose build"
+				echo "Hello world"
+               	echo "PATH=${JENKINS_PATH}"
+				// sh "docker-compose build"
 			}         
 		}
 		stage("Start project") {
 			steps {
-				echo "Hello world"
-               	echo "PATH=${JENKINS_PATH}"
+				
 				// sh "./mongo/docker-compose up -d"
 				// dir('/var/jenkins_home/workspace/pierre/mongo'){
 				// }
