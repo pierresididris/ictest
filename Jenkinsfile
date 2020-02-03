@@ -10,9 +10,9 @@ pipeline {
 				sh "pwd"
 				dir('/var/jenkins_home/workspace/pierre/mongo/'){
 					echo 'Hello world!' 
+					sh "docker-compose build"
 				}
 				sh "pwd"
-				// sh "docker-compose build"
 			}         
 		}
 		stage("Start project") {
