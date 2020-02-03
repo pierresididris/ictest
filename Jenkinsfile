@@ -12,12 +12,12 @@ pipeline {
 		}
 		stage("Start project") {
 			steps {
-				sh "$PWD"
+				sh "pwd"
 				dir('mongo'){
-					sh "$PWD"
+					sh "pwd"
 					sh "docker-compose up -d"
 				}
-				sh "$PWD"
+				sh "pwd"
 			}         
 		}
 	}
