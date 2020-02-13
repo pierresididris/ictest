@@ -16,7 +16,7 @@ pipeline {
 
 		stage("Test project project") {
 			steps {
-				sh "docker exec -it awesome_web sh -c 'cd front && npm test'"
+				sh "docker exec -i awesome_web sh -c 'cd front && npm test'"
 				// dir('/var/jenkins_home/workspace/pierre/front/'){
 				// 	echo 'Hello World!' 
 				// 	// sh "docker-compose up -d"	 
