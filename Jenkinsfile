@@ -14,11 +14,18 @@ pipeline {
 			}         
 		} 
 
-		stage("Test project project") {
+		// stage("Test project project") {
+		// 	steps {
+		// 		sh "pwd"
+		// 		echo 'Hello World!' 
+		// 		sh "docker-compose up -d"	 
+				
+		// 	}         
+		// } 
+		stage("Test unitaire") {
 			steps {
-				sh "pwd"
-				echo 'Hello World!' 
-				sh "docker-compose up -d"	 
+				echo "It\'s time to unit test" 
+				sh "docker ps"	 
 				
 			}         
 		} 
