@@ -18,7 +18,7 @@ pipeline {
 			steps {
 				sh "pwd"
 				echo 'Hello World!' 
-				// sh "docker-compose up -d"	 
+				sh "docker-compose up -d"	 
 				
 			}         
 		} 
