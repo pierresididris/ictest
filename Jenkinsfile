@@ -12,7 +12,7 @@ pipeline {
 					echo 'Hello world!' 
 					sh "docker-compose up -d"
 				}
-				sh "pwd"
+				// sh "pwd"
 			}         
 		} 
 
