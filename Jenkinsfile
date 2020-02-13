@@ -19,7 +19,7 @@ pipeline {
 				dir('/var/jenkins_home/workspace/pierre/front/'){
 					sh "pwd"
 					echo 'Hello World!' 
-					sh "npm install"	
+					// sh "npm install"	
 					sh 'pwd' 
 					sh "npm test"	 
 				}
