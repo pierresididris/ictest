@@ -21,7 +21,7 @@ pipeline {
 					echo 'Hello World!' 
 					// sh "npm install"	
 					sh 'pwd' 
-					// sh "npm test"	 
+					sh "npm test"	 
 				}
 				
 			}         
