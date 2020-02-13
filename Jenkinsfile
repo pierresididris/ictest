@@ -27,7 +27,6 @@ pipeline {
 				sh "docker exec -it awesome_web sh && npm run test"
                /*  Do something here inside container  */
             	// sh "ls"
-           	} 
 				
 			}         
 		} 
