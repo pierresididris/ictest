@@ -14,28 +14,14 @@ pipeline {
 			}         
 		} 
 
-		// stage("Test project project") {
-		// 	steps {
-		// 		dir('/var/jenkins_home/workspace/pierre/front/'){
-		// 			sh "pwd"
-		// 			echo 'Hello World!' 
-		// 			// sh "npm install"	
-		// 			sh 'pwd' 
-		// 			sh "npm test"	 
-		// 		}
-				
-		// 	}         
-		// } 
 		stage("Test project project") {
 			steps {
-				def workspace = pwd()
-				docker.image('node:12.15.0').inside("-v ${workspace}:/."){
-					sh """
-						cd .
-						npm install
-						npm run test
-					"""
-				}
+				sh "docker exec -it awesome_web sh -c \"cd front && npm test\""
+				// dir('/var/jenkins_home/workspace/pierre/front/'){
+				// 	echo 'Hello World!' 
+				// 	// sh "docker-compose up -d"	 
+				// 	sh "docker-compose up -d"	 
+				// }
 				
 			}         
 		} 
