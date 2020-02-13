@@ -24,9 +24,9 @@ pipeline {
 		// } 
 		stage("Test unitaire") {
 			steps {
-				docker.image('awesome_web').inside{
+				sh "docker exec -it awesome_web sh && npm run test"
                /*  Do something here inside container  */
-            	sh "ls"
+            	// sh "ls"
            	} 
 				
 			}         
