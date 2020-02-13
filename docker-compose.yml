@@ -11,6 +11,10 @@ services:
         build:
             context: ./front
             dockerfile: Dockerfile
+
+        volumes:
+            - ./front/:/app/front
+        
         image: hiro/awesome_web
         ports:
             - "3000:3000"
