@@ -24,7 +24,7 @@ pipeline {
 		// } 
 		stage("Test unitaire") {
 			steps {
-				docker.image('hiro/awesome_web').inside{
+				docker.image('awesome_web').inside{
                /*  Do something here inside container  */
             	sh "ls"
            	} 
