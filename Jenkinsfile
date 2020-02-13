@@ -9,7 +9,7 @@ pipeline {
 			steps {
 				sh "pwd"
 				dir('/var/jenkins_home/workspace/pierre/'){
-					echo 'Hello world!' 
+					echo 'Hello Every body!' 
 					sh "docker-compose up -d"
 				}
 				// sh "pwd"
