@@ -8,10 +8,8 @@ pipeline {
 		stage("Builds project") {
 			steps {
 				sh "pwd"
-				dir('/var/jenkins_home/workspace/pierre/'){
-					echo 'Hello Every body!' 
-					sh "docker-compose up -d"
-				}
+				echo 'Hello Every body!' 
+				sh "docker-compose up -d"	
 			}         
 		} 
 
