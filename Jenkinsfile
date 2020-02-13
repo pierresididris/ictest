@@ -10,6 +10,15 @@ pipeline {
 				sh "pwd"
 				echo 'Hello Every body!' 
 				// sh "docker-compose up -d"	 
+
+			}         
+		} 
+
+		stage("Test project project") {
+			steps {
+				sh "pwd"
+				echo 'Hello Every body!' 
+				// sh "docker-compose up -d"	 
 				
 			}         
 		} 
