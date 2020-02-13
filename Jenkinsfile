@@ -17,7 +17,7 @@ pipeline {
 		stage("Test project project") {
 			steps {
 				sh "pwd"
-				echo 'Hello Every !' 
+				echo 'Hello Every       !' 
 				// sh "docker-compose up -d"	 
 				
 			}         
