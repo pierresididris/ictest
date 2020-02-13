@@ -9,7 +9,8 @@ pipeline {
 			steps {
 				sh "pwd"
 				echo 'Hello Every body!' 
-				// sh "docker-compose up -d"	
+				// sh "docker-compose up -d"	 
+				
 			}         
 		} 
 
