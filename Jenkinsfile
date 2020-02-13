@@ -14,22 +14,22 @@ pipeline {
 			}         
 		} 
 
-		// stage("Test project project") {
-		// 	steps {
-		// 		sh "pwd"
-		// 		echo 'Hello World!' 
-		// 		sh "docker-compose up -d"	 
-				
-		// 	}         
-		// } 
-		stage("Test unitaire") {
+		stage("Test project project") {
 			steps {
-				sh "docker exec -i awesome_web npm  test -- --coverage"
-               /*  Do something here inside container  */
-            	// sh "ls"
+				sh "pwd"
+				echo 'Hello World!' 
+				sh "docker-compose up -d"	 
 				
 			}         
 		} 
+		// stage("Test unitaire") {
+		// 	steps {
+		// 		sh "docker exec -i awesome_web npm  test -- --coverage"
+        //        /*  Do something here inside container  */
+        //     	// sh "ls"
+				
+		// 	}         
+		// } 
 
 	}
 

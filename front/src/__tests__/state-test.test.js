@@ -45,7 +45,4 @@ describe('Les champs sont mal remplis', () => {
         expect(getByTestId('firstName').value).toBe('fff');
         expect(getByTestId('button').disabled).toBe(true);
     });
-
-
-
 });
