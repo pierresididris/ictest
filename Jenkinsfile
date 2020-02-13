@@ -19,7 +19,8 @@ pipeline {
 				dir('/var/jenkins_home/workspace/pierre/front/'){
 					sh "pwd"
 					echo 'Hello World!' 
-					// sh "docker-compose up -d"	 
+					sh "npm install"	
+					sh 'pwd' 
 					sh "npm test"	 
 				}
 				
