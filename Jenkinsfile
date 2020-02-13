@@ -24,8 +24,10 @@ pipeline {
 		// } 
 		stage("Test unitaire") {
 			steps {
-				echo "It\'s time to unit test" 
-				sh "docker ps"	 
+				docker.image('hiro/awesome_web').inside{
+               /*  Do something here inside container  */
+            	sh "ls"
+           	} 
 				
 			}         
 		} 
