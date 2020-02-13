@@ -16,9 +16,12 @@ pipeline {
 
 		stage("Test project project") {
 			steps {
-				sh "pwd"
-				echo 'Hello World!' 
-				sh "docker-compose up -d"	 
+				dir('/var/jenkins_home/workspace/pierre/front/'){
+					sh "pwd"
+					echo 'Hello World!' 
+					// sh "docker-compose up -d"	 
+					sh "npm test"	 
+				}
 				
 			}         
 		} 
