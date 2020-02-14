@@ -22,7 +22,7 @@ class PostForm extends Component {
 
   onSubmitHandler = (e) => {
     e.preventDefault()
-    axios.post('http://localhost:8085/insert', this.state)
+    axios.post('http://localhost/insert:8085', this.state)
     .then(response => {
       console.log(response)
     })
