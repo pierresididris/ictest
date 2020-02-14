@@ -4,7 +4,16 @@ pipeline {
 			label 'master' 
 		} 
 	}     
-	stages {         
+	stages {       
+		stage("kill old container") {
+			steps {
+				sh "pwd"
+				echo 'Time to build' 
+				sh "docker-compose down"	 
+
+			}         
+		} 
+
 		stage("Builds project") {
 			steps {
 				sh "pwd"
@@ -14,12 +23,12 @@ pipeline {
 			}         
 		} 
 
-		stage("Test project project") {
-			steps {
-				sh "docker exec -i awesome_web sh -c 'cd front && npm test'"
+		// stage("Test project ") {
+		// 	steps {
+		// 		sh "docker exec -i awesome_web sh -c 'cd front && npm test'"
 
-			}         
-		} 
+		// 	}         
+		// } 
 
 		stage("Deploy project") {
 			steps {
