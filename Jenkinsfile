@@ -33,6 +33,7 @@ pipeline {
 		stage("Deploy project") {
 			steps {
 				echo 'Time to deploy' 
+				
 				// sh "docker-compose up -d"	 
 
 			}         
