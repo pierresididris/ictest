@@ -22,13 +22,7 @@ pipeline {
 
 			}         
 		} 
-
-		// stage("Test project ") {
-		// 	steps {
-		// 		sh "docker exec -i awesome_web sh -c 'cd front && npm test'"
-		// 	}         
-		// } 
-
+ 
 		stage("Deploy project") {
 			steps {
 				echo 'Time to deploy' 
